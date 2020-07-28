@@ -85,6 +85,20 @@ sed -i "/persist.camera.HAL3.enabled=/c\persist.camera.HAL3.enabled=1
 \$ i sys.tianma_nt36672_length=46
 \$ i sys.jdi_nt36672_offset=9
 \$ i sys.jdi_nt36672_length=45
+\$ i persist.vendor.imx376_sunny.low.lux=310
+\$ i persist.vendor.imx376_sunny.light.lux=280
+\$ i persist.vendor.imx376_ofilm.low.lux=310
+\$ i persist.vendor.imx376_ofilm.light.lux=280
+\$ i persist.vendor.bokeh.switch.lux=290
+\$ i persist.vendor.camera.auxswitch.threshold=330
+\$ i persist.vendor.camera.mainswitch.threshold=419
+\$ i persist.vendor.camera.stats.test=0
+\$ i persist.vendor.camera.depth.focus.cb=0
+\$ i persist.vendor.camera.isp.clock.optmz=0
+\$ i persist.vendor.camera.linkpreview=0
+\$ i persist.vendor.camera.auxswitch.threshold=330
+\$ i persist.vendor.camera.mainswitch.threshold=419
+\$ i persist.vendor.camera.expose.aux=1
 /persist.vendor.camera.model=/c\persist.vendor.camera.model=MI 6X" $PSYSTEM/system/build.prop
 
 
@@ -95,12 +109,27 @@ sed -i "/ro.build.characteristics=/c\ro.build.characteristics=nosdcard" $PSYSTEM
 
 sed -i "/ro.product.vendor.model=/c\ro.product.vendor.model=MI 6X
 /ro.product.vendor.name=/c\ro.product.vendor.name=wayne
+\$ i persist.vendor.imx376_sunny.low.lux=310
+\$ i persist.vendor.imx376_sunny.light.lux=280
+\$ i persist.vendor.imx376_ofilm.low.lux=310
+\$ i persist.vendor.imx376_ofilm.light.lux=280
+\$ i persist.vendor.bokeh.switch.lux=290
+\$ i persist.vendor.camera.auxswitch.threshold=330
+\$ i persist.vendor.camera.mainswitch.threshold=419
+\$ i persist.vendor.camera.stats.test=0
+\$ i persist.vendor.camera.depth.focus.cb=0
+\$ i persist.vendor.camera.isp.clock.optmz=0
+\$ i persist.vendor.camera.linkpreview=0
+\$ i persist.vendor.camera.auxswitch.threshold=330
+\$ i persist.vendor.camera.mainswitch.threshold=419
+\$ i persist.vendor.camera.expose.aux=1
 /ro.product.vendor.device=/c\ro.product.vendor.device=wayne" $PVENDOR/build.prop
 
 
 sed -i "/ro.product.odm.device=/c\ro.product.odm.device=wayne
 /ro.product.odm.model=/c\ro.product.odm.model=MI 6X
 /ro.product.odm.device=/c\ro.product.odm.device=wayne
+/ro.product.model=/c\ro.product.model=MI 6X
 /ro.product.odm.name=/c\ro.product.odm.name=wayne" $PVENDOR/odm/etc/build.prop
 
 
