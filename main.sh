@@ -347,7 +347,7 @@ brotli -j -v -q 6 $OUTP/zip/system.new.dat
 brotli -j -v -q 6 $OUTP/zip/vendor.new.dat
 
 cd $OUTP/zip
-zip -ry $OUTP/10_MIUI_12_wayne_$ROMVERSION.zip *
+zip -ry $OUTP/10_MASIK_wayne.zip *
 cd $CURRENTDIR
 rm -rf $OUTP/zip
 chown -hR $CURRENTUSER:$CURRENTUSER $OUTP
