@@ -62,7 +62,18 @@ chmod 755 $PSYSTEM/system/addon.d
 
 cp -af $SVENDOR/etc/MIUI_DualCamera_watermark.png $PVENDOR/etc/MIUI_DualCamera_watermark.png
 
+#Debloat MIUI and Google Trash
 rm -rf $PSYSTEM/system/priv-app/Updater
+rm -rf $PSYSTEM/system/priv-app/Browser
+rm -rf $PSYSTEM/system/priv-app/WfdService
+rm -rf $PSYSTEM/system/priv-app/MiRecycle
+rm -rf $PSYSTEM/system/priv-app/MiService
+rm -rf $PSYSTEM/system/app/AutoTest
+rm -rf $PSYSTEM/system/app/MiuiBugReport
+rm -rf $PSYSTEM/system/app/wps_lite
+rm -rf $PSYSTEM/system/app/Joyose
+rm -rf $PSYSTEM/system/app/Health
+rm -rf $PSYSTEM/system/app/Qmmi
 
 mv $PSYSTEM/system/etc/device_features/lavender.xml $PSYSTEM/system/etc/device_features/wayne.xml
 mv $PVENDOR/etc/device_features/lavender.xml $PVENDOR/etc/device_features/wayne.xml
@@ -71,7 +82,7 @@ mv $PVENDOR/etc/device_features/lavender.xml $PVENDOR/etc/device_features/wayne.
 sed -i "/persist.camera.HAL3.enabled=/c\persist.camera.HAL3.enabled=1
 /persist.vendor.camera.HAL3.enabled=/c\persist.vendor.camera.HAL3.enabled=1
 /ro.product.model=/c\ro.product.model=MI 6X
-/ro.build.id=/c\ro.build.id=MIUI 12 by Nebrassy
+/ro.build.id=/c\ro.build.id=MIUI 12 by xNICKKy
 /persist.vendor.camera.exif.model=/c\persist.vendor.camera.exif.model=MI 6X
 /ro.product.name=/c\ro.product.name=wayne
 /ro.product.device=/c\ro.product.device=wayne
@@ -265,6 +276,7 @@ sed -i "/support_dual_sd_card/c\    <bool name=\"support_dual_sd_card\">true<\/b
 /is_redmi/c\    <bool name=\"is_redmi\">false<\/bool>
 /paper_mode_max_level/c\    <float name=\"paper_mode_max_level\">32.0<\/float>
 /paper_mode_min_level/c\    <float name=\"paper_mode_min_level\">0.0<\/float>
+\$ i <bool name="support_aod">true</bool> 
 /is_18x9_ratio_screen/c\    <bool name=\"is_18x9_ratio_screen\">true<\/bool>" $PSYSTEM/system/etc/device_features/wayne.xml
 
 
@@ -277,6 +289,7 @@ sed -i "/support_dual_sd_card/c\    <bool name=\"support_dual_sd_card\">true<\/b
 /is_redmi/c\    <bool name=\"is_redmi\">false<\/bool>
 /paper_mode_max_level/c\    <float name=\"paper_mode_max_level\">32.0<\/float>
 /paper_mode_min_level/c\    <float name=\"paper_mode_min_level\">0.0<\/float>
+\$ i <bool name="support_aod">true</bool> 
 /is_18x9_ratio_screen/c\    <bool name=\"is_18x9_ratio_screen\">true<\/bool>" $PVENDOR/etc/device_features/wayne.xml
 
 
@@ -306,7 +319,16 @@ chown -hR root:root $PVENDOR/etc/qdcm_calib_data_tianma_nt36672_fhd_video_mode_d
 setfattr -h -n security.selinux -v u:object_r:vendor_configs_file:s0 $PVENDOR/etc/qdcm_calib_data_jdi_nt36672_fhd_video_mode_dsi_panel.xml
 setfattr -h -n security.selinux -v u:object_r:vendor_configs_file:s0 $PVENDOR/etc/qdcm_calib_data_tianma_nt36672_fhd_video_mode_dsi_panel.xml
 
+#Add AOD
+cp -Raf $FILES/miuiaod/system/priv-app/MiuiAod $PSYSTEM/system/priv-app/MiuiAod
+chmod 755 $PSYSTEM/system/priv-app/MiuiAod
+chmod 644 $PSYSTEM/system/priv-app/MiuiAod/*
 
+chown -hR root:root $PSYSTEM/system/priv-app/MiuiAod
+chown -hR root:root $PSYSTEM/system/priv-app/MiuiAod/*
+
+setfattr -h -n security.selinux -v u:object_r:system_file:s0 $PSYSTEM/system/priv-app/MiuiAod
+setfattr -h -n security.selinux -v u:object_r:system_file:s0 $PSYSTEM/system/priv-app/MiuiAod/*
 
 sed -i "124 i \
 
