@@ -82,7 +82,7 @@ mv $PVENDOR/etc/device_features/lavender.xml $PVENDOR/etc/device_features/wayne.
 sed -i "/persist.camera.HAL3.enabled=/c\persist.camera.HAL3.enabled=1
 /persist.vendor.camera.HAL3.enabled=/c\persist.vendor.camera.HAL3.enabled=1
 /ro.product.model=/c\ro.product.model=MI 6X
-/ro.build.id=/c\ro.build.id=MIUI 12 by xNICKKy
+/ro.build.id=/c\ro.build.id=MIUI 12 by MadDogRRS2
 /persist.vendor.camera.exif.model=/c\persist.vendor.camera.exif.model=MI 6X
 /ro.product.name=/c\ro.product.name=wayne
 /ro.product.device=/c\ro.product.device=wayne
@@ -103,7 +103,7 @@ sed -i "/persist.camera.HAL3.enabled=/c\persist.camera.HAL3.enabled=1
 \$ i persist.vendor.bokeh.switch.lux=290
 \$ i persist.vendor.camera.auxswitch.threshold=330
 \$ i persist.vendor.camera.mainswitch.threshold=419
-\$ i persist.vendor.camera.stats.test=0
+\$ i persist.vendor.camera.stats.test=5
 \$ i persist.vendor.camera.depth.focus.cb=0
 \$ i persist.vendor.camera.isp.clock.optmz=0
 \$ i persist.vendor.camera.linkpreview=0
@@ -127,7 +127,7 @@ sed -i "/ro.product.vendor.model=/c\ro.product.vendor.model=MI 6X
 \$ i persist.vendor.bokeh.switch.lux=290
 \$ i persist.vendor.camera.auxswitch.threshold=330
 \$ i persist.vendor.camera.mainswitch.threshold=419
-\$ i persist.vendor.camera.stats.test=0
+\$ i persist.vendor.camera.stats.test=5
 \$ i persist.vendor.camera.depth.focus.cb=0
 \$ i persist.vendor.camera.isp.clock.optmz=0
 \$ i persist.vendor.camera.linkpreview=0
